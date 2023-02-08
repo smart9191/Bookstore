@@ -1,0 +1,26 @@
+server:
+  port: 8087
+spring:
+#  session:
+#    store-type: jdbc
+#    jdbc:
+#      initialize-schema: always
+#    timeout: 600
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bookstore
+    username: dvs_prog
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: update
+#    show-sql: true
+jwt:
+  token:
+    secret: 123@321
+    validity: 86400000
+
